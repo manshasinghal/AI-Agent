@@ -3,7 +3,7 @@ import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 import { TDocumentDefinitions, ContentStack, ContentText } from "pdfmake/interfaces";
 
-pdfMake.vfs = pdfFonts.vfs;
+(pdfMake as any).vfs = (pdfFonts as any).vfs;
 
 const COLORS = {
   primary:   "#0f172a", // slate-950
